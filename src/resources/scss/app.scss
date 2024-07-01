@@ -1,15 +1,14 @@
 @import '_variable';
-h1{
+h1 {
     color: $color-red;
     font-size: 15px;
     font-weight: 500;
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.navbar{
+.navbar {
     background-color: aquamarine;
 }
-

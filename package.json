@@ -4,8 +4,9 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start":"nodemon --inspect src/app.js",
-    "watch":"node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
+    "beautifull": "lint-staged",
+    "start": "nodemon --inspect src/app.js",
+    "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,14 +23,20 @@
   "bugs": {
     "url": "https://github.com/HungRubi/store-nodejs/issues"
   },
+  "lint-staged": {
+    "src/**/*.{js,json,scss}":"prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
   "homepage": "https://github.com/HungRubi/store-nodejs#readme",
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^7.1.3"
   },
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2"
   }
 }
