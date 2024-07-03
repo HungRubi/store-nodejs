@@ -34,4 +34,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 route(app);
 
-app.listen(port, () => console.log(`Server is running localhost:${port}`));
+app.listen(port, () => console.log(`App is running localhost:${port}`));
